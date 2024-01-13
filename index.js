@@ -24,6 +24,16 @@ $(document).keypress(function() {
     start = true;
   }
 });
+// function for click in the body to use eventListener
+$(document).click(function() {
+  $("h1").text("Level - " + level);
+// if statement for check the game started or not
+  if(!start) {
+    $("h1").text("Level - " + level);
+    nextSequence();
+    start = true;
+  }
+});
 // function for the game comp color selection sequence
 function nextSequence() {
 
